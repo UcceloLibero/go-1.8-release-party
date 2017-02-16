@@ -10,13 +10,6 @@ Randall McPherson
 
 This presentation is licensed under the [[https://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-ShareAlike 4.0 International]] licence.
 
-The materials for this presentation are available on GitHub:
-
-.link https://github.com/davecheney/go-1.8-release-party
-
-You are encouraged to remix, transform, or build upon the material, providing you distribute your contributions under the same license.
-
-If you have suggestions or corrections to this presentation, please raise [[https://github.com/davecheney/go-1.8-release-party/issues][an issue on the GitHub project]].
 
 * Go 1.8
 
@@ -30,15 +23,13 @@ Go 1.8 is the 9th release in the Go 1 series. It follows from the previous versi
 
 .link http://beta.golang.org/doc/go1.8 Go 1.8 Release Notes (DRAFT)
 
-* What's changed
+* PERFORMANCE
 
-So, what's happened in the last six months.
+* What's changed in the last six months?
 
 - Performance
 - Compiler changes
 - Changes to the standard library
-
-* Performance
 
 * Performance
 
@@ -97,11 +88,24 @@ This is the result of merging two defers on the standard cgo calling path.
 
 Lots of small updates to the standard library.
 
-There have been optimizations to implementations in the `bytes`, `crypto/aes`, `crypto/cipher`, `crypto/elliptic`, `crypto/sha256`, `crypto/sha512`, `encoding/asn1`, `encoding/csv`, `encoding/hex`, `encoding/json`, `hash/crc32`, `image/color`, `image/draw`, `math`, `math/big`, `reflect`, `regexp`, `runtime`, `strconv`, `strings`, `syscall`, `text/template`, and `unicode/utf8` packages.
+There have been optimizations to implementations in the:
+
+`bytes`,           `crypto/aes`,
+`crypto/cipher`,   `crypto/elliptic`,
+`crypto/sha256`,   `crypto/sha512`, 
+`encoding/asn1`,   `encoding/csv`, 
+`encoding/hex`,    `encoding/json`,
+`hash/crc32`,      `image/color`, 
+`image/draw`,      `math`,
+`math/big`,        `reflect`, 
+`regexp`,          `runtime`,
+`strconv`,         `strings`, 
+`syscall`,         `text/template`, and 
+`unicode/utf8` packages.
 
 .link http://beta.golang.org/doc/go1.8#library Go 1.8 Standard Library Changes
 
-* Compiler changes
+* COMPILER CHANGES
 
 * SSA backend
 
@@ -157,7 +161,7 @@ If you or your company care about ARMv5, you have to shoulder some of the burdon
 
 _No_ARMv5_builders_means_ARMv5_support_will_be_dropped_in_Go_1.9_.
 
-* Tools
+* TOOLS
 
 * go tool yacc
 
@@ -308,7 +312,7 @@ A non-constant value x can be converted to type T in any of these cases:
 - *ignoring*struct*tags*, x's type and T are unnamed pointer types and their pointer base types have identical underlying types.
 - ...
 
-* Ports to other platforms
+* PORTS TO OTHER PLATFORMS
 
 * Ports to other platforms
 
@@ -355,7 +359,7 @@ When `GOPATH` is not defined, the tool will use:
 - `$HOME/go` on Unix
 - `%USERPROFILE%\go` on Windows
 
-* Runtime
+* RUNTIME
 
 * Detection of concurrent map accesses
 
@@ -379,7 +383,7 @@ Mutex profile is not supported in, [[pkg/profile][https://github.com/pkg/profile
 
 Who wants to be the first to send me a PR?
 
-* Changes to the standard library
+* CHANGES TO THE STANDARD LIBRARY
 
 * sort.Slice
 
@@ -413,7 +417,7 @@ Since Go 1.8:
 - database/sql
 - net.Resolver
 
-* What's coming up in Go 1.9
+* WHAT'S COMING UP IN Go 1.9
 
 * What's coming up in Go 1.9
 
